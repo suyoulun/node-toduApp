@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>profile</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <style>
+        *{margin: 0; padding: 0;}
+    </style>
+</head>
+<body>
+<h1>EJS page!</h1>
+<h2>参数：<%= websiteName %></h2>
+<ul>
+    <% for (var i = 0; i < data.length; i++) { %>
+    <li>
+        <p><strong>age:</strong><%= data[i].age %></p>
+        <% data[i].name.forEach(function (item) { %>
+            <p><strong>name:</strong><%= item %></p>
+        <% }) %>
+    </li>
+    <% } %>
+</ul>
+
+</body>
+</html>
+
